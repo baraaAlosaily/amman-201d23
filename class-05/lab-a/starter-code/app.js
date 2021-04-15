@@ -10,8 +10,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   let sum = a + b;
-  let msg = 'The sum of '+ a +' and '+ b +' is '+ sum +'.';
-  return [sum, msg]
+  let massage = 'The sum of '+ a +' and '+ b +' is '+ sum +'.';
+  return [sum, massage]
 }
 // console.log( sum(4, 11));
 
