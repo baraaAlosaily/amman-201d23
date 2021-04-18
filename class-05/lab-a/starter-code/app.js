@@ -83,7 +83,7 @@ let sumArr=0;
 for(let i=0;i<testArray.length;i++){
   sumArr=sumArr+testArray[i];
 }
-let statment=testArray[0]+','+testArray[1]+','+ testArray[2]+' was passed in as an array of numbers, and 9 is their sum.';
+let statment=testArray+' was passed in as an array of numbers, and 9 is their sum.';
 return[sumArr,statment];
 }
 
@@ -139,8 +139,8 @@ let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 function multiplyAnyArray(testDynamicArray) { //eslint-disable-line
   let sumArr=1;
   for(let i=0;i<testDynamicArray.length;i++){
-  sumArr=sumArr*testDynamicArray[i];}
-  let msg='The numbers '+testDynamicArray[0]+','+testDynamicArray[1]+','+testDynamicArray[2]+','+testDynamicArray[3]+','+testDynamicArray[4]+' have a product of 120.'
+  sumArr=multiply(sumArr,testDynamicArray[i])[0];}
+  let msg='The numbers '+testDynamicArray+' have a product of '+sumArr+'.'
   return[sumArr,msg]
 }
 
