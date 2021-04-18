@@ -108,8 +108,8 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(testArray) { //eslint-disable-line
   let sumArr=1;
   for(let i=0;i<testArray.length;i++){
-  sumArr=sumArr*testArray[i];}
-  let msg='The numbers '+testArray[0]+','+testArray[1]+','+testArray[2]+' have a product of 24.'
+  sumArr=multiply(sumArr,testArray[i])[0];}
+  let msg='The numbers '+testArray+' have a product of 24.'
   return[sumArr,msg]
 }
 // Here is the test for multiplyArray(); uncomment it to run it
