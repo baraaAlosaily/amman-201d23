@@ -78,6 +78,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
+  
 function sumArray(sumArr) { //eslint-disable-line
   let iniSum=0;
   for (let i = 0 ;i <sumArr.length ;i++){
@@ -86,6 +87,7 @@ function sumArray(sumArr) { //eslint-disable-line
   let msg=sumArr+" was passed in as an array of numbers, and "+iniSum+" is their sum.";
   let result=[iniSum,msg];
   return result;
+
 }
 
 
@@ -140,8 +142,8 @@ let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 function multiplyAnyArray(testDynamicArray) { //eslint-disable-line
   let sumArr=1;
   for(let i=0;i<testDynamicArray.length;i++){
-  sumArr=sumArr*testDynamicArray[i];}
-  let msg='The numbers '+testDynamicArray[0]+','+testDynamicArray[1]+','+testDynamicArray[2]+','+testDynamicArray[3]+','+testDynamicArray[4]+' have a product of 120.'
+  sumArr=multiply(sumArr,testDynamicArray[i])[0];}
+  let msg='The numbers '+testDynamicArray+' have a product of '+sumArr+'.'
   return[sumArr,msg]
 }
 
