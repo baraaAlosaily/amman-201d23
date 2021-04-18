@@ -9,7 +9,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  let sum = a + b;
+  let sum=a+b;
   let massage = 'The sum of '+ a +' and '+ b +' is '+ sum +'.';
   return [sum, massage]
 }
@@ -53,11 +53,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-let sum=a+b+c;
-let multi=a*b*c;
-let msg1=a+ ' and ' +b+' and '+c+' sum to '+ sum+'.';
-let msg2='The product of ' +a+' and '+b+ ' and '+c+ ' is ' +multi+'.';
-return[sum,multi,msg1,msg2]
+let allSum=sum(sum(a,b)[0],c)[0];
+let Allmutli=multiply(multiply(a,b)[0],c)[0];
+let msg1=a+ ' and ' +b+' and '+c+' sum to '+ allSum+'.';
+let msg2='The product of ' +a+' and '+b+ ' and '+c+ ' is ' +Allmutli+'.';
+return[allSum,Allmutli,msg1,msg2]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -78,13 +78,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(testArray) { //eslint-disable-line
-let sumArr=0;
-for(let i=0;i<testArray.length;i++){
-  sumArr=sumArr+testArray[i];
-}
-let statment=testArray+' was passed in as an array of numbers, and 9 is their sum.';
-return[sumArr,statment];
+  
+function sumArray(sumArr) { //eslint-disable-line
+  let iniSum=0;
+  for (let i = 0 ;i <sumArr.length ;i++){
+      iniSum=sum (iniSum,sumArr[i])[0];
+  }
+  let msg=sumArr+" was passed in as an array of numbers, and "+iniSum+" is their sum.";
+  let result=[iniSum,msg];
+  return result;
+
 }
 
 
@@ -108,8 +111,8 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(testArray) { //eslint-disable-line
   let sumArr=1;
   for(let i=0;i<testArray.length;i++){
-  sumArr=sumArr*testArray[i];}
-  let msg='The numbers '+testArray[0]+','+testArray[1]+','+testArray[2]+' have a product of 24.'
+  sumArr=multiply(sumArr,testArray[i])[0];}
+  let msg='The numbers '+testArray+' have a product of 24.'
   return[sumArr,msg]
 }
 // Here is the test for multiplyArray(); uncomment it to run it
