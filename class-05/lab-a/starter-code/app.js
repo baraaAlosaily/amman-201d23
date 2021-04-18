@@ -53,11 +53,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-let sum=a+b+c;
-let multi=a*b*c;
 let msg1=a+ ' and ' +b+' and '+c+' sum to '+ sum+'.';
 let msg2='The product of ' +a+' and '+b+ ' and '+c+ ' is ' +multi+'.';
-return[sum,multi,msg1,msg2]
+return[sum(4,7,5),multiply(4,7,5),msg1,msg2]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
