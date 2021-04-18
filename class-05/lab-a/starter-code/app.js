@@ -9,7 +9,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  let sum = a + b;
+  let sum=a+b;
   let massage = 'The sum of '+ a +' and '+ b +' is '+ sum +'.';
   return [sum, massage]
 }
